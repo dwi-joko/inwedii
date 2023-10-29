@@ -5,6 +5,7 @@
     --white: #ffffff;
     --transparent-black: #0009;
     --gradation: #ff7c7c96;
+    --text-color: #212529;
   }
 
 body{
@@ -13,6 +14,7 @@ body{
     font-weight: normal;
     scroll-behavior: smooth;
     transition: all 0.5s;
+    
 }
 
 @font-face {
@@ -73,6 +75,8 @@ ul,li{
     background: #D1D5DB;
     font-size: 0.8125rem;
     text-transform: capitalize;
+    border: 0;
+    color: var(--text-color);
 }
 
 .btn-default:hover {
@@ -157,7 +161,7 @@ section.galery {
 .title-section{
     color: var(--pink);
     font-family: "Beyond Infinity";
-
+    padding-bottom: 2rem;
 }
 
 .notes p.underline {
@@ -398,7 +402,7 @@ section.event:after {
     padding: 1rem;
 }
 
-.command-list {
+.command-list, .comment-list {
     padding: 1rem;
     border-radius: 8px;
     border: 1px solid #EEEEF0;
@@ -428,6 +432,14 @@ section.event:after {
     margin: 0;
 }
 
+.comment-list li {
+    padding: 0.5rem 1rem;
+    background: #f3f4f6;
+    border-radius: 5px;
+    /* font-size: 1.1rem; */
+    margin: 1rem 0;
+}
+
 .command-list .card-command .text .bg-grey {
     background: #F3F4F6;
     border-radius: 8px;
@@ -436,7 +448,7 @@ section.event:after {
     flex-wrap: wrap;
 }
 
-.command-list ul li {
+.command-list ul li, .comment-list ul li {
     padding: .5rem 0;
 }
 
@@ -507,6 +519,25 @@ section.guest-book:after {
     background-position: center;
     background-size: cover;
     opacity: .1;
+    background-attachment: fixed;
+}
+
+.left-form input, .left-form textarea {
+    width: 100%;
+    font-size: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    color: #333;
+}
+
+.left-form {
+    padding: 2rem;
+    background: var(--light-pink);
+    border-radius: 20px;
 }
 
 section.guest-book .container {
@@ -518,8 +549,221 @@ section.guest-book .container {
     padding-left: .5rem;
 }
 
+.video .button-wrapper {
+    padding-top: 1rem;
+}
 
-.galery-wrapper img {
-    height: 50%;
-    object-fit: cover;
+section.video {
+    padding: 3rem 0 6rem;
+}
+
+.video .video-wrapper {
+    padding-bottom: 56.5%;
+    position: relative;
+}
+
+.video .video-wrapper iframe {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+section.quote {
+    padding: 6rem 0;
+    background: url(./images/hero.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+section.quote .text-center {
+    color: #fff;
+}
+
+section.quote .text-center h3.title-section {
+    color: #fff;
+}
+
+section.quote .text-center .quote-box {
+    padding-top: 5rem;
+}
+
+section.quote:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--gradation);
+}
+
+section.quote .container {
+    position: relative;
+    z-index: 1;
+}
+
+section.story {
+    padding: 6rem 0;
+}
+
+.audio-icon-wrapper {
+    width: 4rem;
+    height: 4rem;
+    font-size: 4rem;
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2rem;
+    cursor: pointer;
+    color: white;
+    opacity: 0.5;
+    mix-blend-mode: difference;
+    animation: rotating 4s linear infinite;
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+}
+
+
+.gift .card-detail {
+    background: #ff7c7c;
+    padding: 2rem;
+    border-radius: 10px;
+    color: #fff;
+  }
+  .gift {
+    padding: 6rem 0 12rem;
+  }
+
+  section.thanks {
+    padding: 6rem 0 8rem;
+}
+
+section.thanks .images img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+section.thanks .images {
+    padding-bottom: 3rem;
+}
+
+.thanks .text .title-section {
+    padding-bottom: 1rem;
+}
+
+/* Responsive */
+
+
+@media (max-width: 992px) {
+    .col-md-8 {
+        width: 100%;
+    }
+
+    .fixed-menu ul{
+        max-width: 70%;
+    }
+
+    .event ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .event ul li {
+        width: 47%;
+        margin-top: 1rem;
+    }
+    
+}
+
+@media (max-width: 580px){
+
+    .fixed-menu ul li a {
+        font-size: 0.5625rem;
+    }
+    
+    .fixed-menu ul li .icon img {
+        width: 20px;
+    }
+    .hero-content h1 {
+        font-size: 3.5rem;
+        padding: 1rem;
+    }
+
+    .fixed-menu ul {
+        max-width: 90%;
+    }
+    .notes ul li {
+        width: 50%;
+    }
+
+    .detail-couple>ul>li {
+        width: 100%;
+    }
+    
+    .detail-couple>ul {
+        flex-direction: column;
+    }
+    
+    .detail-couple>ul li {
+        padding-top: 2rem;
+    }
+    
+    .event ul li {
+        width: 100%;
+    }
+
+    .galery-wrapper .col {
+        width: 50%;
+    }
+
+    .galery-wrapper .col {
+        width: 50%;
+    }
+    
+    section.galery {
+        padding: 6rem 0 3rem;
+    }
+
+    .card-wrapper .quote-list {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .card-wrapper .quote-list .images {
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .quote-list .text {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .quote-list .text ul {
+        justify-content: center;
+    }
+    
+    section.story {
+        padding-bottom: 3rem;
+    }
+    
+    .simply-countdown .simply-section {
+        margin: 0 .3rem;
+    }
+    
+    .gift ul li {
+        width: 100%;
+    }
+    
+    section#gift {
+        padding-bottom: 6rem;
+    }
 }

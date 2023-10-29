@@ -14,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 
     <!-- simplyCountdown -->
     <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css" />
@@ -21,30 +23,48 @@
 </head>
 
 <body>
+    <section id="cover" class="hero cover">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto heroimage">
+                    <div class="hero-content text-center">
+                        <div data-aos="fade-down" class="icon"><img src="images/ribbon.png" alt=""></div>
+                        <p>We Are Getting Married</p>
+                        <h1 data-aos="fade-down">Romeo x Juliet</h1>
+                        <h6>Sabtu, 16 Desember 2023</h6>
+                        <p>Dear</p>
+                        <h6>Ayana</h6>
+                        <p>Jakarta</p>
+                        <a href="#hero" class="btn btn-default btn-lg mt-4" onClick="enableScroll()">Open Invitation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="fixed-menu">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 mx-auto">
                     <ul>
-                        <li><a href="#">
+                        <li><a href="#hero">
                                 <div class="icon"><img src="images/home.png" alt=""></div> Beranda
                             </a></li>
-                        <li><a href="#">
+                        <li><a href="#couple">
                                 <div class="icon"><img src="images/friends.png" alt=""></div>Profile
                             </a></li>
-                        <li><a href="#">
+                        <li><a href="#event">
                                 <div class="icon"><img src="images/calendar-check.png" alt=""></div>Acara
                             </a></li>
-                        <li><a href="#">
+                        <li><a href="#galery">
                                 <div class="icon"><img src="images/galery.png" alt=""></div>Galeri
                             </a></li>
-                        <li><a href="#">
+                        <li><a href="#story">
                                 <div class="icon"><img src="images/pen.png" alt=""></div>Cerita
                             </a></li>
-                        <li><a href="#">
+                        <li><a href="#gift">
                                 <div class="icon"><img src="images/gift.png" alt=""></div>Hadiah
                             </a></li>
-                        <li><a href="#">
+                        <li><a href="#guest-book">
                                 <div class="icon"><img src="images/chat.png" alt=""></div>Ucapan
                             </a></li>
                     </ul>
@@ -57,9 +77,9 @@
             <div class="row">
                 <div class="col-md-8 mx-auto heroimage">
                     <div class="hero-content text-center">
-                        <div class="icon"><img src="images/ribbon.png" alt=""></div>
+                        <div data-aos="fade-down" class="icon"><img src="images/ribbon.png" alt=""></div>
                         <p>We Are Getting Married</p>
-                        <h1>Romeo x Juliet</h1>
+                        <h1 data-aos="fade-down">Romeo x Juliet</h1>
                         <h6>Sabtu, 16 Desember 2023</h6>
                         <p>Dear</p>
                         <h6>Ayana</h6>
@@ -73,7 +93,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 mx-auto text-center">
-                    <h2 class="title-section">
+                    <h2 data-aos="fade-down" data-aos-duration="5000" class="title-section">
                         Notets
                     </h2>
 
@@ -113,12 +133,12 @@
         </div>
 
     </section>
-    <section class="couple">
+    <section id="couple" class="couple">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 mx-auto">
                     <div class="title-wrapper text-center">
-                        <h2 class="title-section ">
+                        <h2 data-aos="fade-down" data-aos-duration="5000" class="title-section ">
                             Bride x Groom
                         </h2>
                         <p>Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
@@ -128,7 +148,7 @@
                     </div>
                     <div class="detail-couple">
                         <ul>
-                            <li>
+                            <li data-aos-duration="1000" data-aos="fade-up" data-aos-easing="ease-in-out">
                                 <div class="card-couple">
                                     <div class="images">
                                         <img src="images/man.webp" alt="">
@@ -157,7 +177,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li data-aos-duration="2000" data-aos="fade-up" data-aos-easing="ease-in-out">
                                 <div class="card-couple">
                                     <div class="images">
                                         <img src="images/woman.webp" alt="">
@@ -192,12 +212,12 @@
             </div>
         </div>
     </section>
-    <section class="event">
+    <section id="event" class="event">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 mx-auto">
                     <ul>
-                        <li>
+                        <li data-aos-duration="1000" data-aos="fade-down" data-aos-easing="ease-in-out">
                             <div class="card-event">
                                 <h3 class="beyond">Akad Nikah</h3>
                                 <p>Jumat, 15 Desember 2023</p>
@@ -207,10 +227,15 @@
                                     Jl. Prof. DR. Drs Notonagoro, Karang Malang, Caturtunggal, Kec. Depok, Kabupaten
                                     Sleman, Yogyakarta
                                 </p>
-                                <a href="#" class="maps btn btn-default">Google Map</a>
+                                <button type="button" class="btn btn-primary maps btn btn-default"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Google Map
+                                </button>
+
+                                <!-- <a href="#" class="maps btn btn-default">Google Map</a> -->
                             </div>
                         </li>
-                        <li>
+                        <li data-aos-duration="2000" data-aos="fade-down" data-aos-easing="ease-in-out">
                             <div class="card-event">
                                 <h3 class="beyond">Resepsi</h3>
                                 <p>Jumat, 15 Desember 2023</p>
@@ -220,10 +245,14 @@
                                     Jl. Prof. DR. Drs Notonagoro, Karang Malang, Caturtunggal, Kec. Depok, Kabupaten
                                     Sleman, Yogyakarta
                                 </p>
-                                <a href="#" class="maps btn btn-default">Google Map</a>
+                                <button type="button" class="btn btn-primary maps btn btn-default"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Google Map
+                                </button>
+                                <!-- <a href="#" class="maps btn btn-default">Google Map</a> -->
                             </div>
                         </li>
-                        <li>
+                        <li data-aos-duration="3000" data-aos="fade-down" data-aos-easing="ease-in-out">
                             <div class="card-event">
                                 <h3 class="beyond">Ngunduh Mantu</h3>
                                 <p>Jumat, 15 Desember 2023</p>
@@ -233,7 +262,11 @@
                                     Jl. Prof. DR. Drs Notonagoro, Karang Malang, Caturtunggal, Kec. Depok, Kabupaten
                                     Sleman, Yogyakarta
                                 </p>
-                                <a href="#" class="maps btn btn-default">Google Map</a>
+                                <button type="button" class="btn btn-primary maps btn btn-default"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Google Map
+                                </button>
+                                <!-- <a href="#" class="maps btn btn-default">Google Map</a> -->
                             </div>
                         </li>
                     </ul>
@@ -245,19 +278,20 @@
             </div>
         </div>
     </section>
-    <section class="galery">
+    <section id="galery" class="galery">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 mx-auto">
-                    <h3 class="title-section beyond text-center">
+                    <h3 data-aos-duration="2000" data-aos="fade-down" data-aos-easing="ease-in-out"
+                        class="title-section beyond text-center">
                         Our Gallery
                     </h3>
                     <div class="galery-wrapper">
                         <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center">
                             <div class="col mt-3">
-                                <a href="img/gallery/1.png" data-toggle="lightbox" data-caption="Sandhika & Nofa 1"
-                                    data-gallery="mygallery">
-                                    <img src="https://picsum.photos/id/300/300/400"" alt=" Sandhika & Nofa 1"
+                                <a href="https://picsum.photos/id/301/1200/768" data-toggle="lightbox"
+                                    data-caption="Sandhika & Nofa 1" data-gallery="mygallery">
+                                    <img src="https://picsum.photos/id/301/300/400"" alt=" Sandhika & Nofa 1"
                                         class="img-fluid w-100 rounded">
                                 </a>
                             </div>
@@ -296,38 +330,66 @@
                                         class="img-fluid w-100 rounded">
                                 </a>
                             </div>
+                            <div class="col mt-3">
+                                <a href="https://picsum.photos/id/305/1200/768" data-toggle="lightbox"
+                                    data-caption="Sandhika & Nofa 6" data-gallery="mygallery">
+                                    <img src="https://picsum.photos/id/305/300/400" alt="Sandhika & Nofa 6"
+                                        class="img-fluid w-100 rounded">
+                                </a>
+                            </div>
+                            <div class="col mt-3">
+                                <a href="https://picsum.photos/id/305/1200/768" data-toggle="lightbox"
+                                    data-caption="Sandhika & Nofa 6" data-gallery="mygallery">
+                                    <img src="https://picsum.photos/id/305/300/400" alt="Sandhika & Nofa 6"
+                                        class="img-fluid w-100 rounded">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="video>
-        <div class=" container">
-        <div class="row">
-            <div class="col-md-8 mx-auto">
-                <h3 class="title-section beyond text-center">
-                    Our Video
-                </h3>
-                <div class="video-wrapper text-center">
-                    <iframe width="800" height="400" src="https://www.youtube.com/embed/hG_yZXiR45k"
-                        title="Karel Marquez and Sean Fariñas Pre-Wedding Video" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
+    <section id="video" class="video">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <h3 data-aos-duration="1000" data-aos="fade-down" data-aos-easing="ease-in-out"
+                        class="title-section beyond text-center">
+                        Our Video
+                    </h3>
+                    <div data-aos-duration="1000" data-aos="fade-up" data-aos-easing="ease-in-out"
+                        class="video-wrapper text-center">
+                        <iframe width="800" height="400" src="https://www.youtube.com/embed/hG_yZXiR45k"
+                            title="Karel Marquez and Sean Fariñas Pre-Wedding Video" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="button-wrapper text-center">
+                        <a href="#" class="btn btn-default">Live Instagram</a>
+                        <a href="#" class="btn btn-default">Live Youtube</a>
+                        <a href="#" class="btn btn-default">Live Tiktok</a>
+                    </div>
                 </div>
-                <div class="button-wrapper text-center">
-                    <a href="#" class="btn btn-default">Live Instagram</a>
-                    <a href="#" class="btn btn-default">Live Youtube</a>
+            </div>
+
+            <div class="row pt-5">
+                <div class="invited text-center">
+                    <h3 class="title-section beyond">Turut Mengundang</h3>
+                    <ul>
+                        <li>✔ Ir. H. Joko Widodo </li>
+                        <li>✔ Prof. Dr. (H.C.) K. H. Ma'ruf Amin</li>
+                    </ul>
                 </div>
             </div>
         </div>
-        </div>
     </section>
 
-    <section class="quote">
+    <section id="quote" class="quote">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 text-center mx-auto">
+                <div class="col-md-8 text-center mx-auto " data-aos-duration="1000" data-aos="fade-down"
+                    data-aos-easing="ease-in-out">
                     <h3 class="title-section beyond">
                         Our Quote
                     </h3>
@@ -340,15 +402,17 @@
             </div>
         </div>
     </section>
-    <section class="story">
+    <section id="story" class="story">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 mx-auto">
-                    <h3 class="title-section beyond text-center">
+                    <h3 data-aos-duration="1000" data-aos="fade-down" data-aos-easing="ease-in-out"
+                        class="title-section beyond text-center">
                         Our Story
                     </h3>
                     <div class="card-wrapper">
-                        <div class="quote-list">
+                        <div data-aos-duration="1000" data-aos="fade-up" data-aos-easing="ease-in-out"
+                            class="quote-list">
                             <div class="images">
                                 <img src="images/man.webp" alt="">
                             </div>
@@ -370,7 +434,8 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="quote-list">
+                        <div data-aos-duration="1000" data-aos="fade-up" data-aos-easing="ease-in-out"
+                            class="quote-list">
                             <div class="images">
                                 <img src="images/man.webp" alt="">
                             </div>
@@ -392,7 +457,8 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="quote-list">
+                        <div data-aos-duration="1000" data-aos="fade-up" data-aos-easing="ease-in-out"
+                            class="quote-list">
                             <div class="images">
                                 <img src="images/man.webp" alt="">
                             </div>
@@ -423,15 +489,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 mx-auto text-center">
-                    <h3 class="title-section beyond text-center">
+                    <h3 data-aos-duration="1000" data-aos="fade-down" data-aos-easing="ease-in-out"
+                        class="title-section beyond text-center">
                         Countdown
                     </h3>
-                    <div class="simply-countdown"></div>
+                    <div data-aos-duration="1000" data-aos="fade-up" data-aos-easing="ease-in-out"
+                        class="simply-countdown"></div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="gift">
+    <section id="gift" class="gift">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 mx-auto text-center">
@@ -440,6 +508,7 @@
                     </h3>
                     <ul>
                         <li>
+                            <h3 class="title-section">Kirim Amplop</h3>
                             <div class="d-flex">
                                 <div class="text">
                                     <p class="bank brand-color">BCA</p>
@@ -452,6 +521,7 @@
                             </div>
                         </li>
                         <li>
+                            <h3 class="title-section">Kirim Hadiah</h3>
                             <div class="d-flex justify-content-between">
                                 <div class="text">
                                     <p class=" brand-color">ALAMAT</p>
@@ -481,7 +551,7 @@
             </div>
         </div>
     </section>
-    <section class="guest-book">
+    <section id="guest-book" class="guest-book">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 mx-auto">
@@ -521,13 +591,13 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <!-- <li>
                                 <div class="form-group">
                                     <label for="wish" class="form-label">Address</label>
                                     <textarea type="text" class="form-control" id="wish"
                                         placeholder="Ucapan dan doa"></textarea>
                                 </div>
-                            </li>
+                            </li> -->
                             <li class="button">
                                 <a href="#" class="btn btn-default">kirim</a>
                             </li>
@@ -574,10 +644,136 @@
                             </li>
                         </ul>
                     </div>
+
+
+                    <h3 class="title-section text-center">
+                        Wedding Wishes
+                    </h3>
+                    <div class="wrapper-form">
+                        <form class="comment-form" action="#" method="post">
+                            <div class="left-form">
+                                <input class="form-control" type="text" name="username" id="username"
+                                    placeholder="Username">
+                                <input class="email-input form-control" type="email" name="email" id="email"
+                                    placeholder="Email">
+                                <textarea class="input-comment form-control" name="comment" id="coment" rows="10"
+                                    placeholder="Write your whises"></textarea>
+                                <button type="submit" class="comment-add btn btn-default">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="wrapper-comments">
+                        <ul class="comment-list">
+                            <li>Selamat Berbahagia</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="visitors mx-auto text-center pt-5 col-lg-4 col-sm-12">
+                    <h4 class="beyond pb-3">QR Code Tamu</h4>
+                    <div class="card-detail ">
+                        <img src="./images/qrcode.png" alt="qr">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- <section class="gift">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                    <div class="card-detail text-center">
+                        <h4 class="beyond">Kirim Amplop</h4>
+                        <p>Jika berkenan memberikan hadiah, bisa dikirim melalui rekening beriku</p>
+                        <button type="button" class="btn btn-default" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Kirim Amplop
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <div class="card-detail text-center">
+                        <h4 class="beyond">Kirim Hadiah</h4>
+                        <p>Jika berkenan memberikan hadiah, bisa dikirim melalui rekening beriku</p>
+                        <button type="button" class="btn btn-default" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Kirim Hadiah
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="visitors mx-auto text-center pt-5 col-lg-4 col-sm-12">
+                    <h4 class="beyond pb-3">QR Code Tamu</h4>
+                    <div class="card-detail ">
+                        <img src="./images/qrcode.png" alt="qr">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="thanks">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-sm-12 mx-auto text-center">
+                    <div data-aos="fade-zoom-in" data-aos-easing="linear" data-aos-duration="1500" class="images">
+                        <img src="images/hero.jpeg" alt="">
+                    </div>
+                    <div data-aos="fade-zoom-in" data-aos-easing="linear" data-aos-duration="1500" class="text">
+                        <h4 class="beyond title-section">THANK YOU</h4>
+                        <p>There are many special moments throughout life, and wedding day is definitely one that will
+                            be remembered dearly. Therefore, our joy will be more complete with your presence and
+                            blessings on our special day. See you on our big day!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="sign text-center">
+                    <p>With love,</p>
+                    <h5 class="beyond">Ferdy and Michelle</h5>
+                    <p>#foreFerChellebration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="audio-container">
+        <audio id="song" autoplay loop>
+            <source src="audio/save-and-sound.mp3" type="audio/mp3">
+        </audio>
+
+        <div class="audio-icon-wrapper" style="display: none;">
+            <i class="bi bi-disc"></i>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p class="smaller-text text-center">
+            Copyright ©2023 Created with ❤️ by lukiskenangan
+        </p>
+    </footer>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center" id="exampleModalLabel">Peta</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15812.622729894832!2d110.3800544!3d-7.7733111!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59b5145acaa5%3A0x6e8ad1dcc839dee8!2sMasjid%20Kampus%20UGM!5e0!3m2!1sen!2sid!4v1698498361537!5m2!1sen!2sid"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -599,6 +795,105 @@
             seconds: { singular: 'Secs', plural: 'Secs' }
         },
     });
+</script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+<script>
+    const stickyTop = document.querySelector('.sticky-top');
+    const offcanvas = document.querySelector('.offcanvas');
+
+    offcanvas.addEventListener('show.bs.offcanvas', function () {
+        stickyTop.style.overflow = 'visible';
+    });
+
+    offcanvas.addEventListener('hidden.bs.offcanvas', function () {
+        stickyTop.style.overflow = 'hidden';
+    });
+
+</script>
+
+<script>
+    const rootElement = document.querySelector(":root");
+    const audioIconWrapper = document.querySelector('.audio-icon-wrapper');
+    const audioIcon = document.querySelector('.audio-icon-wrapper i');
+    const song = document.querySelector('#song');
+    let isPlaying = false;
+
+    function disableScroll() {
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+        window.onscroll = function () {
+            window.scrollTo(scrollTop, scrollLeft);
+        }
+
+        rootElement.style.scrollBehavior = 'auto';
+    }
+
+    function enableScroll() {
+        window.onscroll = function () { }
+        rootElement.style.scrollBehavior = 'smooth';
+        // localStorage.setItem('opened', 'true');
+        playAudio();
+    }
+
+    function playAudio() {
+        song.volume = 0.1;
+        audioIconWrapper.style.display = 'flex';
+        song.play();
+        isPlaying = true;
+    }
+
+    audioIconWrapper.onclick = function () {
+        if (isPlaying) {
+            song.pause();
+            audioIcon.classList.remove('bi-disc');
+            audioIcon.classList.add('bi-pause-circle');
+        } else {
+            song.play();
+            audioIcon.classList.add('bi-disc');
+            audioIcon.classList.remove('bi-pause-circle');
+        }
+
+        isPlaying = !isPlaying;
+    }
+
+    // if (!localStorage.getItem('opened')) {
+    //   disableScroll();
+    // }
+    disableScroll();
+</script>
+
+<script>
+    $('button').on('click', function () {
+        $('body').addClass('changeCursor');
+        return false;
+    });
+
+    $('html').on('click', '.changeCursor', function () {
+        $('body.changeCursor').removeClass('changeCursor');
+    });
+</script>
+
+<script>
+    let list = document.querySelector('.comment-list');
+    let input = document.querySelector('.input-comment');
+    let form = document.querySelector('.comment-form');
+
+
+    form.onsubmit = function (evt) {
+        evt.preventDefault();
+        let newElement = document.createElement('li');
+
+        newElement.textContent = input.value;
+        list.append(newElement);
+
+        input.value = '';
+    }
 </script>
 
 </html>
