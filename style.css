@@ -658,6 +658,12 @@ section.thanks .images {
     padding-bottom: 1rem;
 }
 
+.invited h3.title-section.beyond {
+    padding-bottom: 1rem;
+    margin: 0;
+    padding-top: 3rem;
+}
+
 /* Responsive */
 
 
